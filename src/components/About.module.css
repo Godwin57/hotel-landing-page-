@@ -1,0 +1,120 @@
+.about {
+  padding: 120px 0 100px;
+}
+
+.aboutInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.imageWrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4/5;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.imageWrapper:hover img {
+  transform: scale(1.03);
+}
+
+.experienceBadge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  background: var(--accent);
+  color: #000;
+  padding: 16px 24px;
+  border-radius: var(--radius-md);
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.badgeNumber {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1;
+  display: block;
+}
+
+.badgeText {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.textContent {
+  padding: 20px 0;
+}
+
+.aboutLabel {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.aboutTitle {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: var(--text-primary);
+}
+
+.aboutText {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.learnMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  transition: gap var(--transition);
+}
+
+.learnMore:hover {
+  gap: 14px;
+}
+
+.arrow {
+  font-size: 18px;
+  transition: transform var(--transition);
+}
+
+.learnMore:hover .arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .aboutInner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .aboutTitle {
+    font-size: 28px;
+  }
+}
